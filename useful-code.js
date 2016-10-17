@@ -170,4 +170,24 @@ console.log(findSolution(21));
 console.log(findSolution(18));
 console.log(findSolution(15));
 
+// ******************************
+// Math.min/max
 
+// function min(arg1, arg2){
+//   return Math.min(arg1, arg2)
+// }; //will find the min of the two args, limited to 2 args...
+
+// non global Math obj method. Can use multiple arguments. Infinity is also a global object...who knew
+function min() {
+  var result = Infinity;
+  for(var i in arguments) {
+    if(arguments[i] < result) {
+      result = arguments[i];
+    }
+  }
+  return result;
+}
+
+console.log(min(3, 10, 4, 7));
+
+// **************************
