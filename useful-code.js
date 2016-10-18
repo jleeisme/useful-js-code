@@ -208,3 +208,15 @@ var arrayMap = arrayValues.reduce(function(memo, curr) {
 
 console.log(arrayMap);
 
+// **************************
+
+var fahrenheit = [0, 20, 30, 45, 50, 66, 80, 90];
+
+// var celsius = fahrenheit.map(function(elem) {
+//  return Math.round((elem -32) * 5 / 9);
+// });
+
+var celsius = fahrenheit.map(elem => Math.round((elem - 32) * 5 / 9));
+// es6 ^^^^^
+
+console.log(celsius);
