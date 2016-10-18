@@ -191,3 +191,20 @@ function min() {
 console.log(min(3, 10, 4, 7));
 
 // **************************
+
+var arrayValues = [
+  ["One", "Uno", "Un"],
+  ["Two", "Dos", "Deux"],
+  ["Three", "Tres", "Trois"]
+];
+
+// goes through the array using reduce, using the memo argument to take index [0] and attach it to the next index[1].
+// the memo is returned where it's gone through again.
+var arrayMap = arrayValues.reduce(function(memo, curr) {
+  memo[curr[0]] = curr[1] && curr[2];
+  // memo[curr[1]] = curr[2];
+  return memo;
+}, {});
+
+console.log(arrayMap);
+
