@@ -211,6 +211,7 @@ console.log(arrayMap);
 // **************************
 
 var fahrenheit = [0, 20, 30, 45, 50, 66, 80, 90];
+var cels = [0, 5, 10 , 15, 20, 33];
 
 // var celsius = fahrenheit.map(function(elem) {
 //  return Math.round((elem -32) * 5 / 9);
@@ -219,5 +220,7 @@ var fahrenheit = [0, 20, 30, 45, 50, 66, 80, 90];
 var celsius = fahrenheit.map(elem => Math.round((elem - 32) * 5 / 9)); // as a refresher, Math.round returns a value
 // to the nearest integer
 // es6 ^^^^^
+var fahr = cels.map(elem => Math.round((elem * 9) / 5 + 32));
 
 console.log(celsius);
+console.log(fahr);
