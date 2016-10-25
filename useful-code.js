@@ -237,5 +237,12 @@ for (i of range(20, 30 ,2)){// range between 20-30, counts by 2. Uses the genera
   console.log(i);
 };
 
+// **************************
 
+var twoLargestInt = function(int){ // sorts from highest to lowest
+  int = int.sort((a, b) => b - a);
+  return int[0] + int[1]; //adds the two highest ints
+};
 
+arr = [1,2,3,4,5];
+console.log(twoLargestInt(arr));
