@@ -233,7 +233,7 @@ function* range (begin, end, interval = 1) {// generator function from es6 i thi
   }
 };
 
-for (i of range(20, 30 ,2)){// range between 20-30, counts by 2
+for (i of range(20, 30 ,2)){// range between 20-30, counts by 2. Uses the generator function* range to iterate
   console.log(i);
 };
 
