@@ -224,3 +224,18 @@ var fahr = cels.map(elem => Math.round((elem * 9) / 5 + 32));
 
 console.log(celsius);
 console.log(fahr);
+
+// **************************
+
+function* range (begin, end, interval = 1) {// generator function from es6 i think? iterates
+  for (let i = begin; i < end; i += interval) {
+    yield i;
+  }
+};
+
+for (i of range(20, 30 ,2)){// range between 20-30, counts by 2
+  console.log(i);
+};
+
+
+
