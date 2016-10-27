@@ -273,3 +273,33 @@ var twoBigs = biggie + biggieSmalls;
 console.log(twoBigs);
 
 // ***************************
+
+// ********** old form clearing ***********
+
+// var function for blank, or to make blank, forms
+// var noTemp = function(){
+//   noCel = celsius.value = "";
+//   noFahr = fahrenheit.value = "";
+// }
+
+// fahrenheit.onkeyup = function() {
+//   if(fahrenheit.value != "") {
+//     celsius.value = Math.round((this.value - 32) * 5 / 9);
+//   }
+//   else { 
+//     noTemp();
+//   }
+
+//   // if(isNaN(fahrenheit.value)){ //clears the forms when non-numbers are entered
+//   //   noTemp();
+//   // }
+// }
+
+// *********** old colour randomizer **********************
+
+// function getRandomColour() {
+//   color = "hsl(" + Math.random() * 360 + ", 80%, 85%)";
+//   return color;
+// }
+
+// ********************************************
