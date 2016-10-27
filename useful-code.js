@@ -246,3 +246,30 @@ var twoLargestInt = function(int){ // sorts from highest to lowest
 
 arr = [1,2,3,4,5];
 console.log(twoLargestInt(arr));
+
+// ***************************
+// finding the two largest numbers and then adding them at the end
+
+var arr = [5,5,-10,2,4,9,430],
+    biggie = -Infinity,
+    biggieSmalls = -Infinity;
+
+function getBigs() {
+  for (var i = 0, ints = arr.length; i < ints; ++i) {
+    var result = +arr[i];
+
+    if (result > biggie) {
+      biggieSmalls = biggie;
+      biggie = result;
+    } 
+    else { 
+      (result < biggie && result > biggieSmalls) 
+        biggieSmalls = result;
+    }
+  }
+};
+getBigs();
+var twoBigs = biggie + biggieSmalls;
+console.log(twoBigs);
+
+// ***************************
