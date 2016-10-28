@@ -16,8 +16,11 @@ console.log(arr.map(function(row, i){
   }));
 }));
 
-// **************
-
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^ adds the array, second is a vertical sum ^^^^^^^^^")
+console.log();
+// ***********************************************************************************
 var numbers = [
   { one: "1",
     two: "2",
@@ -45,12 +48,15 @@ var arrayFilter = {
 };
 
 var getNumber = arrayFilter.filter(numbers, function(item) {
-  return item.four === "4"
+  return item.two === "2"
 });
 
 // console.log(arrayFilter.filter.matches); currently undefined
-
-// ****************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^ returns the matched items ^^^^^^^^^^^")
+console.log();
+// ***********************************************************************************
 // callback stuff
 // when findWaldo is called, there's an array with Waldo included. That array is the first argument. The second argument is the
 // callback where the actionWhenFound function is called as the 'found' argument. So, if the findWaldo loop finds "Waldo", then
@@ -92,7 +98,11 @@ function callbackFunction(someWord){
 
 greeting("eat", "shit", callbackFunction);
 
-// ***************************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^ finds the index of an item in the array and logs the index through a callback ^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 
 var dayName = function(){ //creates an anonymous function
   var days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
@@ -103,7 +113,11 @@ var dayName = function(){ //creates an anonymous function
 
 console.log(dayName(4));
 
-// ****************************
+ // ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^ returns the the name of the item at the given index ^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 
 var weekDay = function() {
   var days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
@@ -134,13 +148,20 @@ console.log(weekDay.name(weekDay.number("monday"))); // give the number the name
 
 console.log(weekDay.name(weekDay.number("tuesday")));
 
-// *********************************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^ gives the numbers in the array a name ^^^^^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 
 var plusOne = new Function("n", "return n + 1;");// data as code
 console.log(plusOne(10));
 
-// *********************************************
-
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^^ creating functional data ^^^^^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 // recursive example ~~~~~~~~
 
 function findSolution(target) {
@@ -170,7 +191,11 @@ console.log(findSolution(21));
 console.log(findSolution(18));
 console.log(findSolution(15));
 
-// ******************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^^^^^ recursion explained in the comments ^^^^^^^^^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 // Math.min/max
 
 // function min(arg1, arg2){
@@ -190,7 +215,11 @@ function min() {
 
 console.log(min(3, 10, 4, 7));
 
-// **************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^^^^^^^ using Infinity to find the minimum ^^^^^^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 
 var arrayValues = [
   ["One", "Uno", "Un"],
@@ -208,7 +237,11 @@ var arrayMap = arrayValues.reduce(function(memo, curr) {
 
 console.log(arrayMap);
 
-// **************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^ takes the index and attached the next to it ^^^^^^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 
 var fahrenheit = [0, 20, 30, 45, 50, 66, 80, 90];
 var cels = [0, 5, 10 , 15, 20, 33];
@@ -225,7 +258,11 @@ var fahr = cels.map(elem => Math.round((elem * 9) / 5 + 32));
 console.log(celsius);
 console.log(fahr);
 
-// **************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^^^^^ temperature converter ^^^^^^^^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 
 function* range (begin, end, interval = 1) {// generator function from es6 i think? iterates
   for (let i = begin; i < end; i += interval) {
@@ -237,7 +274,11 @@ for (i of range(20, 30 ,2)){// range between 20-30, counts by 2. Uses the genera
   console.log(i);
 };
 
-// **************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^^^^^ given a range, will count up by the given value, here is 2 ^^^^^^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 
 var twoLargestInt = function(int){ // sorts from highest to lowest
   int = int.sort((a, b) => b - a);
@@ -247,7 +288,11 @@ var twoLargestInt = function(int){ // sorts from highest to lowest
 arr = [1,2,3,4,5];
 console.log(twoLargestInt(arr));
 
-// ***************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^^^^^^^^ sorts the array from highest to lowest then add two highest ^^^^^^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
 // finding the two largest numbers and then adding them at the end
 
 var arr = [5,5,-10,2,4,9,430],
@@ -272,4 +317,38 @@ getBigs();
 var twoBigs = biggie + biggieSmalls;
 console.log(twoBigs);
 
-// ***************************
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^^^ more efficient way of looping through an array and adding the two largest ^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
+
+// ********** old form clearing ***********
+
+// var function for blank, or to make blank, forms
+// var noTemp = function(){
+//   noCel = celsius.value = "";
+//   noFahr = fahrenheit.value = "";
+// }
+
+// fahrenheit.onkeyup = function() {
+//   if(fahrenheit.value != "") {
+//     celsius.value = Math.round((this.value - 32) * 5 / 9);
+//   }
+//   else { 
+//     noTemp();
+//   }
+
+//   // if(isNaN(fahrenheit.value)){ //clears the forms when non-numbers are entered
+//   //   noTemp();
+//   // }
+// }
+
+// *********** old colour randomizer **********************
+
+// function getRandomColour() {
+//   color = "hsl(" + Math.random() * 360 + ", 80%, 85%)";
+//   return color;
+// }
+
+// ********************************************
