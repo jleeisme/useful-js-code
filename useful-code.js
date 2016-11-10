@@ -295,27 +295,27 @@ console.log();
 // ***********************************************************************************
 // finding the two largest numbers and then adding them at the end
 
-var arr = [5,5,-10,2,4,9,430],
-    biggie = -Infinity,
-    biggieSmalls = -Infinity;
+var arr = [5, 10, 20, 400, -10, 3, 6, 7, 200],
+    biggest = -Infinity,
+    secondBiggest = -Infinity;
 
-function getBigs() {
+function getTwoBiggest() {
   for (var i = 0, ints = arr.length; i < ints; ++i) {
     var result = +arr[i];
 
-    if (result > biggie) {
-      biggieSmalls = biggie;
-      biggie = result;
-    } 
-    else { 
-      (result < biggie && result > biggieSmalls) 
-        biggieSmalls = result;
+    if (result > secondBiggest && result < biggest) {   
+      secondBiggest = result;
     }
+    else if (result > biggest) {
+      secondBiggest = biggest;
+      biggest = result;
+    } 
   }
 };
-getBigs();
-var twoBigs = biggie + biggieSmalls;
-console.log(twoBigs);
+getTwoBiggest();
+var twoBiggestSum = biggest + secondBiggest;
+console.log(biggest, secondBiggest);
+console.log(twoBiggestSum);
 
 // ***********************************************************************************
 console.log();
