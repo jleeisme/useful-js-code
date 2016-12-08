@@ -314,6 +314,7 @@ function getTwoBiggest() {
 };
 getTwoBiggest();
 var twoBiggestSum = biggest + secondBiggest;
+console.log(arr);
 console.log(biggest, secondBiggest);
 console.log(twoBiggestSum);
 
@@ -322,6 +323,65 @@ console.log();
 console.log("^^^^^^^^^^^^^^^^ more efficient way of looping through an array and adding the two largest ^^^^^^^^^^^^");
 console.log();
 // ***********************************************************************************
+
+// classic
+
+var print = console.log.bind(console);
+function fizzBuzz(operation){
+  var output;
+  for(var i=1;i<=20;i++){
+    output = '';
+    if(operation(i,3)){
+      output+='Fizz';
+    } 
+    if(operation(i,5)){
+      output+='Buzz';
+    } 
+    if(output === '') {
+      output+=i;
+    }
+    print(output);
+  }
+}
+
+function modulo(dividend, divisor){
+  return (dividend%divisor === 0);
+}
+
+fizzBuzz(modulo);
+
+// ***********************************************************************************
+console.log();
+console.log("^^^^^^^^^^^^^^^^ fizzbuzz ^^^^^^^^^^^^");
+console.log();
+// ***********************************************************************************
+
+// i, j, k, l for loop indices
+// k and v for the key and value in a map
+// n for a number (e.g. in Math.abs(n))
+// a, b, c for arbitrary objects (e.g. in max(a, b))
+// e for the element in a generic for each loop
+// f for the function in a higher-order function
+// p for the predicate function in a filter
+// T, T1, T2, … for type variables
+// E for type variables representing the element type of a collection
+// R for a type variable representing the result type of a function
+// ex for the exception in a catch clause
+// op for the operation in a map or fold
+// appending the letter s to indicate the plural, i.e. a collection (e.g. ns for a collection of numbers, xs and ys for two arbitrary collections of generic objects)
+
+// ***********************************************************************************
+
+// ***********************************************************************************
+
+
+// css for vert centering
+// .video {
+//   position: fixed;
+//   top: 50%; left: 50%;
+//   z-index: 1;
+//   transform: translate(-50%, -50%);
+// }
 
 // ********** old form clearing ***********
 
@@ -352,3 +412,6 @@ console.log();
 // }
 
 // ********************************************
+
+// in case I forget, can run a local server with http-server
+// run http-server in the folder of the files you'd like to serve
