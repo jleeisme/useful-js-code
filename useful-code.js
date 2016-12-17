@@ -329,23 +329,23 @@ console.log();
 var print = console.log.bind(console);
 function fizzBuzz(operation){
   var output;
-  for(var i=1;i<=20;i++){
+  for(var i = 1; i <= 20; i++){
     output = '';
-    if(operation(i,3)){
-      output+='Fizz';
+    if(operation(i, 3)){
+      output += 'Fizz';
     } 
-    if(operation(i,5)){
-      output+='Buzz';
+    if(operation(i, 5)){
+      output += 'Buzz';
     } 
     if(output === '') {
-      output+=i;
+      output += i;
     }
     print(output);
   }
 }
 
 function modulo(dividend, divisor){
-  return (dividend%divisor === 0);
+  return (dividend % divisor === 0);
 }
 
 fizzBuzz(modulo);
