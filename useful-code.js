@@ -1,3 +1,7 @@
+console.log('some javascript worth keep around');
+console.log();
+console.log();
+
 var arr = [[1, 1, 1], [2, 2, 2], [3, 3, 3]];
 
 // goes through the arrays and adds them separately
